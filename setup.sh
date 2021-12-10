@@ -1,11 +1,6 @@
 sudo apt install scrcpy git curl neovim vim nodejs npm -y &&
 sudo apt install exuberant-ctags -y &&
-sudo apt remove cmdtest -y &&
-sudo apt remove yarn -y &&
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - &&
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list &&
-sudo apt-get install yarn -y &&
-
+sudo npm install yarn -g
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim' &&
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
