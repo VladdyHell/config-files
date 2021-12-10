@@ -1,8 +1,10 @@
-sudo apt install scrcpy git curl neovim vim nodejs npm -y && 
+sudo apt install scrcpy git curl neovim vim nodejs npm -y &&
+sudo apt install yarn -g -y &&
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim' &&
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim &&
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)" &&
 usrdir="$HOME/.config/nvim/"
 
 if [ -d "$usrdir" ]
@@ -18,6 +20,10 @@ else
 	cd ./config-files &&
 	mv * .* ../ -f
 	cd .. &&
-	rm -r ./config-files	
+	rm -r ./config-files
+
+	cd ~/.config/nvim/plugged/coc.nvim &&
+	yarn install &&
+	yarn build
 fi
 echo 'Finished execution'
