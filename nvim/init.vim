@@ -23,6 +23,7 @@ call plug#end()
 
 :colorscheme molokai
 
+nmap <F8> :TagbarToggle<CR>
 nnoremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>

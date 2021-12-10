@@ -1,4 +1,5 @@
 sudo apt install scrcpy git curl neovim vim nodejs npm -y &&
+sudo apt install exuberant-ctags -y &&
 sudo apt remove cmdtest -y &&
 sudo apt remove yarn -y &&
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - &&
