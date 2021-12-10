@@ -11,11 +11,12 @@ then
 	exit 1
 else
 	echo "CLONING CONFIG FILE..." &&
+	mkdir ~/.config/nvim &&
 	touch ~/.config/nvim/init.vim &&
 	cd ~/.config &&
 	git clone https://github.com/VladdyHell/config-files.git &&
 	cd ./config-files &&
-	mv nvim/ .git .gitignore ../ &&
+	mv * .* ../ -f &&
 	cd .. &&
 	rm -r ./config-files	
 fi
