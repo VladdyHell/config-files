@@ -19,12 +19,17 @@ else
 	cd ~/.config &&
 	git clone https://github.com/VladdyHell/config-files.git &&
 	cd ./config-files &&
-	mv * .* ../ -f
+	mv $(ls -a --ignore=setup.sh) ../ -f
 	cd .. &&
-	rm -r ./config-files
-
+	rm -r ./config-files &&
+	nvim -c "PlugInstall" &&
+	id=$(ps -A | grep vim | awk '{print $1}') &&
+	kill $id &&
 	cd ~/.config/nvim/plugged/coc.nvim &&
 	yarn install &&
-	yarn build
+	yarn build &&
+	nvim -c "CocInstall" &&
+	id=$(ps -A | grep vim | awk '{print $1}') &&
+	kill $id
 fi
 echo 'Finished execution'
