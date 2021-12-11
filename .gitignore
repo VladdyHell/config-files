@@ -3,3 +3,5 @@
 !/.git
 !/.gitignore
 !/setup.sh
+!/pluginstall.vim
+!/cocinstall.vim
