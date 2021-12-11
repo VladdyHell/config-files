@@ -21,7 +21,7 @@ Plug 'https://github.com/neoclide/coc.nvim'
 
 call plug#end()
 
-:colorscheme molokai
+silent! colorscheme molokai
 
 nmap <F8> :TagbarToggle<CR>
 nnoremap <C-f> :NERDTreeFocus<CR>
