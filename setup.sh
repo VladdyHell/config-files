@@ -24,7 +24,7 @@ else
 	cd ./config-files &&
 	sudo mv $(ls -a --ignore=setup.sh --ignore=pluginstall.vim --ignore=cocinstall.vim) ../ -f
 	#cd .. &&
-	rm -r ~/.config/config-files &&
+	sudo rm -r ~/.config/config-files &&
 	nvim -S <(curl -s https://raw.githubusercontent.com/vladdyhell/config-files/master/pluginstall.vim) &&
 	#id1=$(ps -A | grep vim | awk '{print $1}') &&
 	#kill $id1 &&
