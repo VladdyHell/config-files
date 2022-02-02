@@ -1,7 +1,11 @@
 /*
+/nvim/plugged/
+!/nvim/
 !/nvim/init.vim
+!/nvim/coc-settings.json
 !/.git
 !/.gitignore
 !/setup.sh
+!/readd-repo.sh
 !/pluginstall.vim
 !/cocinstall.vim
