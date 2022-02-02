@@ -1,4 +1,3 @@
 :cd
-:CocInstall coc-tsserver
-:q!
-:q!
+:CocInstall
+:qa!

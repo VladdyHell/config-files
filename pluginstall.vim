@@ -1,4 +1,3 @@
 :cd
 :PlugInstall
-:q!
-:q!
+:qa!
